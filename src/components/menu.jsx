@@ -21,8 +21,10 @@ const StyleButton = styled.button`
     height: 4rem;
 `;
 
-const StyleTexto = styled.p`
-    font-size: 7px;
+const StyleDivHeader = styled.div`
+    heigth: 7rem;
+    background-color: blue;
+
 `;
 
 const Menu = () => {
@@ -33,7 +35,9 @@ const Menu = () => {
     }
 
     return ( 
+           
             <Form>
+               
                 <div className='col-2'>
                     <StyleButton
                     className='btn btn-primary  d-block mx-auto'
