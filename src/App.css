@@ -1,11 +1,10 @@
-
-body{
+html, body{
   background-color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
-  .table-hover thead tr:hover th, .table-hover tbody tr:hover td {
-    background-color: #DEFBFC;
-
+.table-hover thead tr:hover th, .table-hover tbody tr:hover td {
+  background-color: #DEFBFC;
 }
 
 .font-bold{
@@ -19,7 +18,12 @@ ul.texto {
 .size-font-resaltar{
   font-size: 2.5rem;
 }
-
+.size-font-p-encabezado{
+  font-size: 1.5rem;
+}
+.size-font-p{
+  font-size: 1rem;
+}
 .background-color-texto{
   background-color: #4D3BD5;
   color: white;
@@ -31,3 +35,42 @@ ul.texto {
   font-family: 'Oswald', sans-serif;
 }
 
+.margin-text-5{
+  margin-top: 5rem;;
+}
+
+.back-ground-color-grey {
+  background-color: #EEEEF7;
+}
+
+.margin-text{
+  margin-top: 1rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+
+.centrar{
+  text-align: center;
+  align-items: center;
+}
+
+/*Padding para los botones de la amortizacion*/
+.btn-padding{
+  padding: .5em 2.8em;
+}
+
+.carousel-caption {
+  position: absolute; 
+  right: 15%;
+  top: 115px; /* Cambiar bottom por top y los píxeles que necesites */
+  left: 4rem;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.general-padding{
+  padding-top: 5rem;;
+}

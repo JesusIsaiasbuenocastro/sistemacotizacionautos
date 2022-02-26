@@ -1,33 +1,25 @@
 import {Fragment, useState, useEffect} from 'react';
 import styled from 'styled-components';
-import { v4 as uuidv4 } from 'uuid';
-import ImagenCarro from '../img/redCar.png';
-import ImagenCaptura from '../img/Captura.png';
-import Mensaje from './error/mensaje';
-import Spinner from './spinner/spinner';
-import Cards from './cards/cards';
-import Opciones from './genericos/opciones';
+import ImagenCarro from '../../img/redCar.png';
+import ImagenCaptura from '../../img/Captura.png';
+import Mensaje from '../error/mensaje';
+import Spinner from '../spinner/spinner';
+import Cards from '../cards/cards';
+import Opciones from '../genericos/opciones';
 
 const DivAlinear = styled.div`
-    box-shadow: 7px 7px 15px PowderBlue; 
-    margin-right:20rem ;
-    margin-left:20rem ;
+    box-shadow: 7px 7px 15px PowderBlue;
 `;
 
 const DivAlinearCards = styled.div`
-    width: 54rem;
-    margin-right:20rem ;
-    margin-left:20rem ;
-    margin-bottom: 24rem;
     margin-top: 4rem;
-    
 `;
 
 const FormStyle = styled.form`
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    position: relative;
+    margin-bottom: 7rem;
 `;
 
 const StyleCenter = styled.div`
@@ -52,11 +44,6 @@ const StyleDiv = styled.div`
 
 const StyleDivDescripcion = styled.div`
     box-shadow: 7px 7px 15px PowderBlue; 
-    height: 18rem;
-    
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    padding: 2rem;
     
 `;
 
@@ -78,7 +65,7 @@ const StyleDivCards = styled.div`
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    position: relative;
+    margin-bottom: 4rem;
 `;
 
 
@@ -219,21 +206,30 @@ const FormCotizacion = () => {
     return ( 
         <Fragment>
             <StyleCenter ><h1>Simulador Crédito Auto </h1> </StyleCenter>
-            <StyleDivDescripcion className='background-color-texto d-flex justify-content-between'>
-            <div className='mt-3'>
-                <h4>Tasas de interés fija anual desde <span className='font-bold'>10.99% anual fija*</span> </h4>
-                <ul className='texto'>
-                    <li> 1.-Cotiza con una tasa de interés máxima de <span className='font-bold'>15.99%</span> fija anual. </li>
-                    <li> 2.-Llena tu solicitud en línea en 10 minutos </li>
-                    <li>3.-Si tu solicitud es aprobada, nuestros asesores telefónicos se pondrán en contacto contigo para explicarte tu oferta final y siguientes pasos </li>
-                </ul>
+             
+            <StyleDivDescripcion className='background-color-texto'>
+            
+                <div className='row'>
+                    <div className='col'>
+                        <div className='p-4 float-left'>
+                            <h4>Tasas de interés fija anual desde <span className='font-bold'>10.99% anual fija*</span> </h4>
+                            <ul className='texto'>
+                                <li> 1.-Cotiza con una tasa de interés máxima de <span className='font-bold'>15.99%</span> fija anual. </li>
+                                <li> 2.-Llena tu solicitud en línea en 10 minutos </li>
+                                <li> 3.-Si tu solicitud es aprobada, nuestros asesores telefónicos se pondrán en contacto contigo para explicarte tu oferta final y siguientes pasos </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='col-sm-6 d-none d-xl-block'>
+                        <div className='float-right'>
+                            <img src={ImagenCaptura} />
+                        </div>
+                    </div>
+                </div>
 
-            </div>
-
-                <img src={ImagenCaptura}  height='100%' />
             </StyleDivDescripcion>
             <StyleEncabezado2>Realiza tu cotización</StyleEncabezado2>
-            <DivAlinear>
+            <DivAlinear className='container'>
                 <FormStyle>
                 <div className='row'>
                     <div className='col-6'> 
@@ -336,7 +332,7 @@ const FormCotizacion = () => {
                         </div>
                         <button 
                             type="submit"
-                            className='btn btn-primary'
+                            className='btn btn-primary '
                             onClick={realizarCotizacion}
                             >Cotizar</button>
                     </div>
@@ -360,40 +356,36 @@ const FormCotizacion = () => {
             </DivAlinear>
 
             
-                { totalMeses.length> 0 ? 
-                    <DivAlinearCards>
-                        <StyleCenter >
-                            <h5> ¿Cuánto quieres pagar al mes? </h5>
-                        </StyleCenter>
-                        
-                        <StyleCenter >
-                            <p>El pago mensual no incluye IVA ni comisiones</p>
-                        </StyleCenter>
-                        <StyleDivCards> 
-                        <div className="row">
-                        { 
-                            totalMeses.map(mes => (
-                                <Cards
-                                key={mes.meses}
-                                mes={mes}
-                                />
-                            ))
-                        }
-                        </div>
-                        
-                            
-                        </StyleDivCards>
+            { totalMeses.length> 0 ? 
+                <section className="container">
+                <DivAlinearCards >
+                    <StyleCenter >
+                        <h5> ¿Cuánto quieres pagar al mes? </h5>
+                    </StyleCenter>
                     
-                    </DivAlinearCards>
-
-                    :null
-                }
+                    <StyleCenter >
+                        <p>El pago mensual no incluye IVA ni comisiones</p>
+                    </StyleCenter>
+                    <StyleDivCards> 
+                    <div className="row">
+                    { 
+                        totalMeses.map(mes => (
+                            <Cards
+                            key={mes.meses}
+                            mes={mes}
+                            />
+                        ))
+                    }
+                    </div>
+                    
+                        
+                    </StyleDivCards>
                 
-            
-
-
-
-            
+                </DivAlinearCards>
+                </section>
+                :null
+            }
+                
         </Fragment>
      );
 }
