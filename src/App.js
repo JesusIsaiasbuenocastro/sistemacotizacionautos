@@ -10,6 +10,7 @@ import Menu from "./components/menu";
 import LayOut from "./components/layout/layout";
 import FormCotizacion from "./components/pages/formCotizacion";
 import CreditoAutomotriz from "./components/pages/creditoAutomotriz";
+import Amortizacion from "./components/pages/amortizacion";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path='/creditoAutomotriz' element={<LayOut/>}>
           <Route index element ={<CreditoAutomotriz/>} />
+        </Route>
+        <Route path='/amortizacion/:meses/:total'>
+          <Route index element ={<Amortizacion/>} />
         </Route>
     </Routes>
   

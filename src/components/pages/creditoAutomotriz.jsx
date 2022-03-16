@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock ,faCalendarDays, faCreditCard, faFileArchive, faUserCheck, faUsers , faCodeCommit} from '@fortawesome/free-solid-svg-icons';
 import { Fragment } from 'react';
 import ImagenAutoMuestra from '../../img/auto-muestra.jpg';
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 const StyleDiv = styled.div`
   
@@ -97,62 +99,61 @@ const CreditoAutomotriz = () => {
                     </div>
                     
                 </div>
-                
-            </div>
-                <div className='text-center margin-text-5 p-2'>
-                    <h1>Beneficios a nuestros clientes</h1>
                 </div>
-            <div className='row mt-5 '>
-                <div className='col'>
-                    <StyleDiv2 className='size-font-resaltar'>
-                        <p>¿Qué beneficios te ofrece?</p> 
-                        <p className='size-font-p'>Conoce a detalle los beneficios de este crédito.</p>
-                    </StyleDiv2>
-                </div>
+                    <div className='text-center margin-text-5 p-2'>
+                        <h1>Beneficios a nuestros clientes</h1>
+                    </div>
+                    <div className='row mt-5 '>
+                    <div className='col'>
+                        <StyleDiv2 className='size-font-resaltar'>
+                            <p>¿Qué beneficios te ofrece?</p> 
+                            <p className='size-font-p'>Conoce a detalle los beneficios de este crédito.</p>
+                        </StyleDiv2>
+                    </div>
 
-                <div className='col back-ground-color-grey'>
-                    <div className='row'>
-                        <div className='row m-3' >
-                            <p className='font-bold'> <FontAwesomeIcon icon={faCodeCommit} className='mr-2' /> TASA DE INTERÉS FIJA ANUAL (SIN IVA)</p>
-                        </div>
-                        <div className='row m-3' >
-                            <p>Sin aumentos en tu mensualidad</p>
-                        </div>
-                        <div className='row m-3'>
-                            <p>La tasa de interés anual es fija durante el plazo del crédito. Tasa máxima, puede mejorar de acuerdo a las condiciones del financiamiento y al plan de financiamiento seleccionado.</p>
-                        </div>
-                        <div className='row m-3'>
-                            <p><span className='font-bold size-font-p-encabezado'>16.99% </span> Honda Finance/Acura Finance</p>
-                        </div>
-                        <div className='row m-3'>
-                            <p> <span className='font-bold size-font-p-encabezado'>18.99% </span>Consumer Finance</p>
-                        </div>
-                        <div className='row m-3'>
-                            <p> <span className='font-bold size-font-p-encabezado'>17.99%</span> Suki Credit</p>
-                        </div>
-                    </div>
-                </div>
-                <div className='col-3 back-ground-color-grey'>
-                    <div className='row'>
-                        <div className='row m-3' >
-                            <p className='font-bold'> <FontAwesomeIcon icon={faCodeCommit} className='mr-2' /> PAGOS ANTICIPADOS</p>
-                        </div>
-                        <div className='row m-3' >
-                            <p>Sin penalización</p>
-                        </div>
-                        <div className='row m-3' >
-                            <p>Decide cómo administrar tu crédito al anticipar tus pagos. Te ofrecemos flexibilidad para reducir tu pago mensual.</p>
-                        </div>
-                        <div className='row m-3' >
-                            <p className='font-bold'> <FontAwesomeIcon icon={faCodeCommit} className='mr-2' /> PROMOCIONES</p>
-                        </div>
-                        <div className='row m-3' >
-                            <p>Para consultar los términos y condiciones de promociones vigentes, busca al ejecutivo en la agencia automotriz que prefieras.</p>
+                    <div className='col back-ground-color-grey'>
+                        <div className='row'>
+                            <div className='row m-3' >
+                                <p className='font-bold'> <FontAwesomeIcon icon={faCodeCommit} className='mr-2' /> TASA DE INTERÉS FIJA ANUAL (SIN IVA)</p>
+                            </div>
+                            <div className='row m-3' >
+                                <p>Sin aumentos en tu mensualidad</p>
+                            </div>
+                            <div className='row m-3'>
+                                <p>La tasa de interés anual es fija durante el plazo del crédito. Tasa máxima, puede mejorar de acuerdo a las condiciones del financiamiento y al plan de financiamiento seleccionado.</p>
+                            </div>
+                            <div className='row m-3'>
+                                <p><span className='font-bold size-font-p-encabezado'>16.99% </span> Honda Finance/Acura Finance</p>
+                            </div>
+                            <div className='row m-3'>
+                                <p> <span className='font-bold size-font-p-encabezado'>18.99% </span>Consumer Finance</p>
+                            </div>
+                            <div className='row m-3'>
+                                <p> <span className='font-bold size-font-p-encabezado'>17.99%</span> Suki Credit</p>
+                            </div>
                         </div>
                     </div>
+                    <div className='col-3 back-ground-color-grey'>
+                        <div className='row'>
+                            <div className='row m-3' >
+                                <p className='font-bold'> <FontAwesomeIcon icon={faCodeCommit} className='mr-2' /> PAGOS ANTICIPADOS</p>
+                            </div>
+                            <div className='row m-3' >
+                                <p>Sin penalización</p>
+                            </div>
+                            <div className='row m-3' >
+                                <p>Decide cómo administrar tu crédito al anticipar tus pagos. Te ofrecemos flexibilidad para reducir tu pago mensual.</p>
+                            </div>
+                            <div className='row m-3' >
+                                <p className='font-bold'> <FontAwesomeIcon icon={faCodeCommit} className='mr-2' /> PROMOCIONES</p>
+                            </div>
+                            <div className='row m-3' >
+                                <p>Para consultar los términos y condiciones de promociones vigentes, busca al ejecutivo en la agencia automotriz que prefieras.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-				
-            </div>
             <div className='row  m-5'>
                 <div className='col text-center font-bold size-font-p-encabezado'>
                     <p>¿Quieres saber cuánto pagarías por mes? Simula tu crédito y precalifica para tu crédito.</p>
