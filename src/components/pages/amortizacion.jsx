@@ -32,7 +32,7 @@ const Amortizacion = () => {
             try {
                 let request;
                 const cotizacion = {meses: meses, precio: Number(total) }
-                request = await fetch('http://localhost:4000/api/cotizacion',{
+                request = await fetch('https://backendsistema.herokuapp.com/api/cotizacion',{
                     method: 'PUT',
                     body: JSON.stringify (cotizacion),
                     headers: {

@@ -160,7 +160,7 @@ const FormCotizacion = () => {
 
     //Obtener las marcas 
     const obtenerDatos = async () =>{
-       let url =`http://localhost:4000/api/marca`;;
+       let url =`https://backendsistema.herokuapp.com/api/marca`;;
        let response = await fetch(url);
             
         let resultado = await response.json();
@@ -186,7 +186,7 @@ const FormCotizacion = () => {
 
     //Obtener las marcas 
     const obtenerDatosModelo = async () =>{
-        let url =`http://localhost:4000/api/modelo/`;;
+        let url =`https://backendsistema.herokuapp.com/api/modelo/`;;
         let response = await fetch(url);
             
         let resultado = await response.json();
